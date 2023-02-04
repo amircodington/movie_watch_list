@@ -7,7 +7,7 @@ function ArchiveButtons() {
       <div className='col text-end'>
         <div className='buttons'>
           <button className='btn btn-primary'>All</button>
-          <button className='btn btn-outline-secondary my-out'>Archived</button>
+          <button className='btn btn-outline-secondary'>Archived</button>
         </div>
       </div>
     </div>
