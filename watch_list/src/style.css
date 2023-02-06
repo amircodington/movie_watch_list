@@ -4,7 +4,7 @@
   margin: 0;
 }
 
-.body {
+body {
   background-color: #1d1d1d;
   border: 15px solid #000;
   font-family: 'Poppins', sans-serif;
@@ -75,4 +75,16 @@
   position: absolute;
   top: 0px;
   left: 0px;
+}
+
+.card-img-top {
+  width: 100px;
+}
+
+.card {
+  background-color: #2d2d2d;
+}
+
+.card-img-top {
+  width: 100%;
 }

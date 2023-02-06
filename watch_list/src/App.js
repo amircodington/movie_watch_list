@@ -1,10 +1,13 @@
+// import { useState } from 'react';
 import Header from './components/Header';
 import Archive from './components/Archive';
-import './App.css';
+import 'bootstrap/dist/css/bootstrap.css';
+
+import './style.css';
 
 function App() {
   return (
-    <div className='body'>
+    <div className='container-fluid'>
       <div className='container'>
         <div className='header'>
           <Header />
