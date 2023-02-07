@@ -3,6 +3,8 @@ import ArchiveButtons from './ArchiveButtons';
 import MoviesList from './MoviesList';
 
 function Archive() {
+  // ---------------------- start state ---------------------- //
+
   const [isArchive, setIsArchive] = useState(false);
   const [movies, setMovies] = useState([
     {
@@ -79,8 +81,9 @@ function Archive() {
       isArchive: false,
     },
   ]);
-
   const [archivedMovies, setArchivedMovies] = useState([]);
+
+  // ---------------------- end state ---------------------- //
 
   return (
     <div className='archive'>
@@ -91,7 +94,6 @@ function Archive() {
           archivedMovies={archivedMovies}
           setArchivedMovies={setArchivedMovies}
           isArchive={isArchive}
-          setIsArchive={setIsArchive}
         />
       </div>
     </div>

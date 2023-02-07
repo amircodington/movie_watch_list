@@ -1,13 +1,7 @@
 import MovieCard from './MovieCard';
 // import { useState } from 'react';
 
-function MoviesList({
-  movies,
-  archivedMovies,
-  setArchivedMovies,
-  isArchive,
-  setIsArchive,
-}) {
+function MoviesList({ movies, archivedMovies, setArchivedMovies, isArchive }) {
   return (
     <div className='row'>
       {isArchive === false

@@ -1,6 +1,8 @@
 import { StarFill, FilePlusFill } from 'react-bootstrap-icons';
 
 function MovieCard({ movie, archivedMovies, setArchivedMovies, movies }) {
+  // ---------------------- start handler ---------------------- //
+
   const onClickHandler = (e) => {
     const targetId = e.target.id;
     movies.map((movie) => {
@@ -13,13 +15,13 @@ function MovieCard({ movie, archivedMovies, setArchivedMovies, movies }) {
             (state) => state.id !== targetId
           );
           setArchivedMovies(newArr);
-          console.log(typeof archivedMovies);
           movie.isArchived = false;
         }
       }
-      console.log(movie.Title, movie.isArchived);
     });
   };
+  // ---------------------- end handler ---------------------- //
+
   return (
     <div className='col-ml-3 col-md-4 col-sm-5'>
       <div className='card'>
@@ -36,7 +38,6 @@ function MovieCard({ movie, archivedMovies, setArchivedMovies, movies }) {
           opacity={movie.isArchived === true ? 1 : 0.5}
         />
 
-        <i className='bi bi-file-plus'></i>
         <div className='card-body'>
           <div className='d-flex justify-content-between'>
             <h5 className='card-title'>{movie.Title}</h5>
@@ -45,7 +46,7 @@ function MovieCard({ movie, archivedMovies, setArchivedMovies, movies }) {
               {movie.rating}
             </p>
           </div>
-          <h5 className='year'>({movie.Year})</h5>
+          <p className='year'>({movie.Year})</p>
         </div>
       </div>
     </div>
