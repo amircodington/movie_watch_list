@@ -8,7 +8,8 @@ body {
   background-color: #1d1d1d;
   border: 15px solid #000;
   font-family: 'Poppins', sans-serif;
-  height: 100vh;
+  height: 100%;
+  min-height: 100vh;
 }
 
 .container {
@@ -26,7 +27,7 @@ body {
   border: 1px solid;
   border-radius: 5px;
   border-color: #f45253;
-  font-size: 1rem;
+  font-size: 1.7rem;
   font-weight: normal;
 }
 
@@ -42,13 +43,14 @@ body {
 }
 
 .title-list {
-  font-size: 1.3rem;
+  font-size: 1.5rem;
 }
 
 .btn {
   width: 90px;
   padding: 4px 10px;
   font-size: 0.9rem;
+  margin-right: 10px;
 }
 
 .btn-primary {
@@ -67,18 +69,10 @@ body {
   color: #6e6e6e;
 }
 
-.card-img-top {
-  position: relative;
-}
-
 .bi {
   position: absolute;
   top: 0px;
   left: 0px;
-}
-
-.card-img-top {
-  width: 100px;
 }
 
 .card {
@@ -86,5 +80,31 @@ body {
 }
 
 .card-img-top {
+  position: relative;
   width: 100%;
+  cursor: pointer;
+}
+
+.card-img-top:hover {
+  background-color: #fff;
+  opacity: 0.5;
+  transition: 0.3s ease-out;
+}
+
+.card {
+  margin: 20px 0px;
+}
+
+.card-title {
+  font-size: 1.3rem;
+}
+
+.year {
+  font-size: 0.8rem;
+}
+
+.sub_button {
+  position: absolute;
+  top: 5px;
+  left: 5px;
 }

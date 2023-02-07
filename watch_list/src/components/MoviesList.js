@@ -1,5 +1,4 @@
 import MovieCard from './MovieCard';
-// import Movie from '../api';
 // import { useState } from 'react';
 
 function MoviesList({
@@ -9,14 +8,27 @@ function MoviesList({
   isArchive,
   setIsArchive,
 }) {
-  const onClickHandler = () => {
-    const selectedMovie = movies.filter((state) => state.id === id);
-  };
   return (
     <div className='row'>
-      {movies.map((movie, index) => (
-        <MovieCard movie={movie} key={movie.imdbID} />
-      ))}
+      {isArchive === false
+        ? movies.map((movie) => (
+            <MovieCard
+              movie={movie}
+              key={movie.id}
+              movies={movies}
+              archivedMovies={archivedMovies}
+              setArchivedMovies={setArchivedMovies}
+            />
+          ))
+        : archivedMovies.map((movie) => (
+            <MovieCard
+              movie={movie}
+              key={movie.id}
+              movies={movies}
+              archivedMovies={archivedMovies}
+              setArchivedMovies={setArchivedMovies}
+            />
+          ))}
     </div>
   );
 }
